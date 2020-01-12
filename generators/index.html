@@ -47,7 +47,7 @@ limitations under the License.
 
   <body>
     <h1>Generators (ES6) Sample</h1>
-    <p>Available in <a href="http://www.chromestatus.com/feature/4959347197083648">Chrome 39+</a></p>
+    <p>Available in <a href="https://www.chromestatus.com/feature/4959347197083648">Chrome 39+</a></p>
 
     <p>
       <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*">Generators</a>
@@ -116,11 +116,10 @@ limitations under the License.
           }
 
           count++;
+          i++;
           // Wrap around to the beginning of the array if we've reach the end.
           if (i >= loremIpsumArray.length) {
             i = 0;
-          } else {
-            i++;
           }
 
           // uppercase is assigned the value passed into the .next() invoked following
@@ -139,7 +138,7 @@ limitations under the License.
 
       document.querySelector('#add-many-words').addEventListener('click', function() {
         // This will iterate over an infinite sequence of words.
-        var infiniteIpsumIterator = new loremIpsumGenerator();
+        var infiniteIpsumIterator = loremIpsumGenerator();
         var manyWordsElement = document.querySelector('#many-words');
 
         for (var word of infiniteIpsumIterator) {
@@ -168,7 +167,7 @@ limitations under the License.
           // Create an iterator from the generator if it doesn't already exist.
           // The iterator will yield 5 words, and whether the first word is in uppercase
           // or not depends on the value of the 'uppercase' parameter.
-          fiveWordIpsumIterator = new loremIpsumGenerator(5, uppercase);
+          fiveWordIpsumIterator = loremIpsumGenerator(5, uppercase);
         }
 
         // Get the next value from the iterator.
@@ -191,12 +190,14 @@ limitations under the License.
     <!-- // [END code-block] -->
 
     <script>
+      /* jshint ignore:start */
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-53563471-1', 'auto');
       ga('send', 'pageview');
+      /* jshint ignore:end */
     </script>
     <!-- Built with love using Web Starter Kit -->
   </body>

@@ -1,6 +1,11 @@
 # Service Worker Recipes
 
-- [Basic registration](https://googlechrome.github.io/samples/service-worker/registration/index.html) -
+- [Basic Demo](https://googlechrome.github.io/samples/service-worker/basic/index.html) -
+a sample covering a basic, common use case. It precaches a set of local resources in a
+versioned cache, and maintains another cache that's populated at runtime as additional
+resources are requested.
+
+- [Simple registration](https://googlechrome.github.io/samples/service-worker/registration/index.html) -
 a bare-bones sample that simply performs service worker registration, with placeholders for various event handlers.
 
 - [Detailed registration](https://googlechrome.github.io/samples/service-worker/registration-events/index.html) -
@@ -42,6 +47,15 @@ take control of the page that just registered it.
 
 - [Using `window.caches`](https://googlechrome.github.io/samples/service-worker/window-caches/index.html) -
 a sample showing how `window.caches` provides access to the Cache Storage API.
+
+- [Using `WindowClient.navigate()`](https://googlechrome.github.io/samples/service-worker/windowclient-navigate/index.html) -
+a sample showing how a service worker can cause web page clients it controls to
+navigate to a given URL.
+
+- [Foreign Fetch](https://googlechrome.github.io/samples/service-worker/foreign-fetch/index.html) -
+a sample showing a client making use of the foreign fetch service worker
+deployed by a third-party service.
+
 
 # Related samples
 

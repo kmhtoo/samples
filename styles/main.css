@@ -1,7 +1,7 @@
 body {
   background-color: #ffffff;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 }
 
 @media screen and (min-width: 832px) {
@@ -24,6 +24,16 @@ h3 {
   margin-top: 2em;
 }
 
+.pageIcon {
+  height: 2.3em;
+  float: left;
+  margin-right: 0.5em;
+}
+
+.availability {
+  margin-bottom: 2em;
+}
+
 .output {
   background-color: #f0f0f0;
   border-radius: 0.75em;
@@ -33,12 +43,17 @@ h3 {
 }
 
 #status {
-  margin-top: 1em;
+  margin: .5em 0;
   font-style: italic;
 }
 
 #log {
-  margin-top: 1em;
+  margin: .5em 0;
+  white-space: pre-wrap;
+}
+
+#status:empty, #log:empty, #content:empty {
+  display: none;
 }
 
 .highlight {

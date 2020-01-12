@@ -1,7 +1,10 @@
 language: ruby
 rvm:
-- 2.1
-script: bundle exec jekyll build
+- 2.2.2
+script:
+  - npm install
+  - npm run lint
+  - bundle exec jekyll build
 branches:
   only:
   - /.*/

@@ -48,10 +48,10 @@ limitations under the License.
   <body>
     <h1>Web Animations Sample</h1>
 
-    <p>Available in <a href="http://www.chromestatus.com/feature/4854343836631040">Chrome 36+</a></p>
+    <p>Available in <a href="https://www.chromestatus.com/feature/4854343836631040">Chrome 36+</a></p>
 
     <p>
-      This demo shows simple animations with <a href="http://updates.html5rocks.com/2014/05/Web-Animations---element-animate-is-now-in-Chrome-36">Web Animations</a> and the <code>element.animate()</code> method.
+      This demo shows simple animations with <a href="https://developers.google.com/web/updates/2014/05/Web-Animations-element.animate-is-now-in-Chrome-36">Web Animations</a> and the <code>element.animate()</code> method.
       Hover (or tap, on mobile) over each square to trigger an animation to a new random background color.
     </p>
     <p>
@@ -93,7 +93,7 @@ limitations under the License.
 
       // Choose a random background color to animate to.
       var hue = Math.random() * 360;
-      var target = 'hsl(' + hue + ', 100%, 50%)'
+      var target = 'hsl(' + hue + ', 100%, 50%)';
 
       // Create keyframes and use element.animate().
       var keyframes = [
@@ -111,12 +111,14 @@ limitations under the License.
     <!-- // [END code-block] -->
 
     <script>
+      /* jshint ignore:start */
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-53563471-1', 'auto');
       ga('send', 'pageview');
+      /* jshint ignore:end */
     </script>
     <!-- Built with love using Web Starter Kit -->
   </body>
